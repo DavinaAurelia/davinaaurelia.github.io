@@ -1,0 +1,124 @@
+---
+title: "Pengaruh Produksi Biji Kakao di Perkebunan Indonesia  Terhadap Volume Ekspor Kakao Pada Tahun 2009-2022"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Davina Aurelia Rachma"
+date: 2024-01-11
+number-sections: true
+format:
+  html: default
+  docx: default
+---
+
+![](poltekapp.jpg){fig-align="center" width="280"}
+
+## Pendahuluan
+
+### Latar belakang
+
+Dengan adanya keinginan setiap negara untuk memiliki pertumbuhan ekonomi yang pesat, maka setiap negara melakukan kegiatan jual beli dengan negara lain, salah satunya melalui kegiatan ekspor dan impor yang dilakukan dengan negara lain. Tujuan dari dilakukannya kegiatan ekspor dan impor adalah guna untuk meningkatkan pendapatan daerah tersebut dan juga memenuhi kebutuhan negara. Adanya kegiatan ekspor (jual) dan impor (beli) dinegara tersebut maka akan memberikan pengaruh terhadap pertumbuhan ekonomi, karena baik ekspor maupun impor keduanya sama-sama memberikan efek dan berperan terhadap kegiatan ekonomi yang akan berpengaruh pada pertumbuhan ekonomi.
+
+### Ruang lingkup
+
+Ruang lingkup pada analisis ini memuat data tentang Pengaruh Produksi Biji Kakao di Perkebunan Indonesia Terhadap Volume Ekspor Kakao Pada Tahun 2009-2022. Data yang digunakan adalah data yang bersifat time series yaitu dalam kurun waktu 2009-2022 dengan satuan Ton, data inilah yang kemudian menjadi objek penelitian.
+
+### Rumusan masalah
+
+1.  Apakah adanya pengaruh produksi biji kakao di perkebunan Indonesia terhadap volume ekspor kakao?
+
+2.  Apakah jumlah produksi biji kakao di perkebunan Indonesia berpengaruh besar terhadap volume ekspor kakao?
+
+### Tujuan dan manfaat penelitian
+
+Tujuan penelitian ini untuk mengetahui pengaruhnya produksi biji kakao di perkebunan Indonesia terhadap volume ekspor kakao pada tahun 2009-2022.
+
+Manfaat penelitian ini adalah memberitahu masyarakat agar mengerti bahwa adanya pengaruh produksi biji kakao di perkebunan Indonesia terhadap volume ekspor kakao pada tahun 2009-2022.
+
+### Package
+
+Packages yang digunakan antara lain sebagai berikut:
+
+```{r}
+library('tidyverse')
+library('readxl')
+library('WDI') 
+```
+
+## Studi pustaka
+
+Kakao (Theobroma cacao) merupakan salah satu komoditi hasil perkebunan Indonesia yang dapat diolah menjadi produk kokoa dan cokelat yang mengandung antioksidan alami. Biji kakao mengandung senyawa polifenol yang berperan sebagai antioksidan. Polifenol golongan flavonoid terutama katekin dan epikatekin adalah komponen utama dalam biji kakao (Osakabe et al., 1998). Pada Peraturan Pemerintah Nomor 10 Tahun 2021, ekspor merupakan kegiatan mengeluarkan barang dari daerah pabean. Daerah pabean merupakan suatu daerah milik Republik Indonesia yang terdiri dari wilayah darat, perairan, dan udara yang juga mencakup seluruh daerah tertentu yang berada dalam Zona Ekonomi Eksklusif (ZEE). Penjelasan sederhananya, arti ekspor adalah kegiatan menjual barang atau jasa ke luar negeri. Seseorang atau lembaga yang melakukan ekspor disebut dengan eksportir. Eksportir sendiri merupakan kegiatan badan hukum atau perseorangan yang melakukan kegiatan ekspor. Kegiatan ekspor yang dilakukan dalam skala besar tentunya akan melibatkan Bea Cukai sebagai pengawas lalu lintas suatu negara. Aktivitas ekspor biasanya terjadi ketika suatu negara sudah mampu memproduksi barang atau jasa dengan jumlah yang besar dan kebutuhan dalam negeri sudah tercukupi. Saat melakukan kegiatan ekspor, maka negara tersebut akan menerima pemasukan yang biasa disebut sebagai devisa. Semakin sering suatu negara melakukan ekspor, maka akan semakin besar pula keuntungan devisa yang diperoleh.
+
+## Metode penelitian
+
+### Data
+
+| Tahun | ProduksI Biji | Volume Ekspor |
+|-------|---------------|---------------|
+| 2009  | 809.503       | 535.236       |
+| 2010  | 837.918       | 552.880       |
+| 2011  | 712.231       | 410.257       |
+| 2012  | 740.531       | 387.790       |
+| 2013  | 720.862       | 414.092       |
+| 2014  | 728.414       | 336.679       |
+| 2015  | 593.331       | 355.321       |
+| 2016  | 658.399       | 330.029       |
+| 2017  | 585.246       | 354.880       |
+| 2018  | 767.280       | 380.827       |
+| 2019  | 734.795       | 358.481       |
+| 2020  | 720.660       | 377.849       |
+| 2021  | 688.210       | 382.712       |
+| 2022  | 650.612       | 385.421       |
+
+Penelitian ini menggunakan data Produksi Biji Kakao di Perkebunan Indonesia Terhadap Volume Ekspor Kakao Pada Tahun 2009-2022 dari Badan Pusat Statistik (BPS)
+
+```{r}
+library('readxl')
+library('tidyverse')
+dat<-read_excel('C:/Users/AUREL/OneDrive/METOPEN/TUGAS UAS/kakao.xlsx')
+plot(dat$X,dat$Y,xlab="Produksi Biji Kakao di Perkebunan  Indonesia",ylab="Volume Ekspor Kakao")
+```
+
+### Metode analisis
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Penelitian ini bermaksud mencari hubungan antara Produksi Biji Kakao di Perkebunan Indonesia (X) dan Volume Ekspor Kakao (Y). Spesifikasi yang dilakukan adalah:
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah Produksi Biji Kakao di Perkebunan Indonesia (X) dan $x_t$ adalah Volume Ekspor Kakao (Y).
+
+## Pembahasan
+
+### Pembahasan masalah
+
+Dikarenakan penelitian ini menggunakan OLS, maka pembahasan yang diberikan mengenai hubungan antara tingkat pengangguran dan jumlah penduduk usia produktif. Data tersebut digabung dan dilakukan regresi sehingga memiliki tampilan seperti berikut :
+
+```{r}
+#import dataset
+library(readxl)
+dat<-read_excel('C:/Users/AUREL/OneDrive/METOPEN/TUGAS UAS/kakao.xlsx')
+head(dat)
+```
+
+X = Produksi Biji Kakao di Perkebunan Indonesia
+
+Y = Volume Ekspor Kakao
+
+### Analisis masalah
+
+Hasil regresinya adalah:
+
+```{r}
+reg<-lm(Y~X,data=dat)
+summary(reg)
+```
+
+## Kesimpulan
+
+Dari hasil regresi dapat dilihat bahwa setiap jumlah Produksi Biji Kakao di Perkebunan Indonesia mengalami nilai naik turun, maka tingkat Volume Ekspor Kakao mengalami nilai naik turun juga. Dari hasil regresi tersebut dapat disimpulkan bahwa Produksi Biji Kakao di Perkebunan Indonesia berpengaruh terhadap Volume Ekspor Kakao 2009-2022.
+
+## Referensi
+
+Badan Pusat Statistik. (2023). Statistik Kakao Indonesia 2022 (Vol. 7, pp. 1--86). https://www.bps.go.id/id/publication/2023/11/30/ef4419ba62e6ec7d4490218e/statistik-kakao-indonesia-2022.html
+
+CNBC Indonesia. (n.d.). Mengenal Apa Itu Ekspor Impor, Pengertian, Tujuan & Contohnya. Retrieved January 10, 2024, from https://www.cnbcindonesia.com/mymoney/20220511125907-72-338113/mengenal-apa-itu-ekspor-impor-pengertian-tujuan-contohnya
+
+Sari, P., Utari, E., Praptiningsih, Y., & Maryanto. (2015). Karakteristik Kimia-Sensori dan Stabilitas Polifenol Minuman Cokelat-Rempah. Jurnal Agroteknologi, 09, 54--66.
